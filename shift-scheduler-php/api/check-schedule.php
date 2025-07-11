@@ -14,7 +14,7 @@ $users = [
     "003" => "Yono",
     "004" => "Yohan"
 ];
-$patternStart = "2024-12-26";
+$patternStart = "2024-12-23";
 
 $userId = isset($_GET['user_id']) ? trim($_GET['user_id']) : null;
 $date = trim($_GET['date']) ?? null;
