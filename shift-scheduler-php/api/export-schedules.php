@@ -26,7 +26,6 @@ if (!$startDate || !$endDate) {
     exit;
 }
 
-// Gunakan nama file tetap
 $tempFile = "../data/schedule.csv";
 
 if ($userId) {
@@ -40,10 +39,6 @@ if ($userId) {
     exportScheduleCSV($users, $shiftPatterns, $startDate, $endDate, $patternStart, $tempFile);
 }
 
-// Kirim file ke browser (opsional)
 header('Content-Type: text/csv');
 header('Content-Disposition: attachment; filename="schedule.csv"');
 readfile($tempFile);
-
-// Jangan unlink(), supaya tetap tersimpan
-// unlink($tempFile);
